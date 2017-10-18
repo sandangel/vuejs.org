@@ -994,7 +994,7 @@ new Vue({
 <li>Khi bạn gán một phần tử trực tiếp vào một index, ví dụ <code>vm.items[index] = newValue</code></li>
 <li>Khi bạn thay đổi kích thước của mảng, ví dụ <code>vm.items.length = newLength</code></li>
 </ol>
-<p>Để khắc phục điểm thứ nhất, bạn có thể dùng một trong hai cách sau đây. Cả hai cách đều đạ được kết quả như <code>vm.items[indexOfItem] = newValue</code>, nhưng đồng thời cũng kích hoạt cập nhật trạng thái trong hệ thống reactivity của Vue:</p>
+<p>Để khắc phục điểm thứ nhất, bạn có thể dùng một trong hai cách sau đây. Cả hai cách đều đạt được kết quả như <code>vm.items[indexOfItem] = newValue</code>, nhưng đồng thời cũng kích hoạt cập nhật trạng thái trong hệ thống reactivity của Vue:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// Vue.set</span></div><div class="line">Vue.set(example1.items, index, newValue)</div></pre></td></tr></table></figure>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// Array.prototype.splice</span></div><div class="line">example1.items.splice(index, <span class="number">1</span>, newValue)</div></pre></td></tr></table></figure>
 <p>Để khắc phục điểm thứ hai, bạn có thể dùng <code>splice</code>:</p>
